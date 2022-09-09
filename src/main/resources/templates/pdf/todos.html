@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Todo's List</title>
+
+    <style>
+        table th {
+           font-weight: bold;
+           background-color: #eeeeee;
+           border: 1px solid red;
+        }
+    </style>
+
+</head>
+<body>
+ <h2 th:text="${title}"></h2>
+<table>
+    <tr>
+        <th>Author</th>
+        <th>Title</th>
+        <th>Body</th>
+    </tr>
+    <tr th:each="item: ${items}">
+        <td th:text="${item.author}"></td>
+        <td th:text="${item.title}"></td>
+        <td th:text="${item.body}"></td>
+    </tr>
+</table>
+
+ <div style="padding-top: 30px;">
+     <img  th:src="${image1}" />
+ </div>
+
+ <div style="padding-top: 30px;">
+     <img  th:src="${barcode1}" />
+ </div>
+
+
+
+</body>
+</html>
